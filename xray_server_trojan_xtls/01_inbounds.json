@@ -1,0 +1,40 @@
+{
+  "inbounds": [
+    {
+      "protocol": "trojan",
+      "listen": "0.0.0.0",
+      "port": 443,
+      "settings": {
+        "clients": [
+          {
+            "password": "some_password",
+            "flow": "xtls-rprx-direct"
+          }
+        ],
+        "fallbacks": [
+          {
+            "dest": 80
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "xtls",
+        "xtlsSettings": {
+          "serverName": "example.com",
+          "alpn": [ "http/1.1" ],
+          "certificates": [
+            {
+              "certificateFile": "/etc/ssl/trojan/fullchain.crt",
+              "keyFile": "/etc/ssl/trojan/key.key"
+            }
+          ]
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [ "http", "tls"]
+      }
+    }
+  ]
+}
