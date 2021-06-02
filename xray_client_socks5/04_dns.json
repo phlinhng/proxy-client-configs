@@ -1,0 +1,9 @@
+{
+  "dns": {
+    "servers": [
+      "https://cloudflare-dns.com/dns-query",
+      "https://101.6.6.6/dns-query",
+      "localhost"
+    ]
+  }
+}

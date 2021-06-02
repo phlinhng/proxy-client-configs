@@ -1,0 +1,18 @@
+{
+  "inbounds": [
+    {
+      "protocol": "shadowsocks",
+      "port": 10802,
+      "listen": "0.0.0.0",
+      "settings": {
+        "method": "aes-128-gcm",
+        "password": "your_password",
+        "network": "tcp,udp"
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [ "http", "tls" ]
+      }
+    }
+  ]
+}

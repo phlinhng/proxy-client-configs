@@ -1,0 +1,18 @@
+[Unit]
+Description=Xray - A unified platform for anti-censorship
+Documentation=https://github.com/xtls
+After=network.target nss-lookup.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE CAP_NET_RAW
+NoNewPrivileges=yes
+Environment=XRAY_LOCATION_ASSET=/usr/local/share/xray
+ExecStart=/usr/local/bin/xray run -confdir /usr/local/etc/xray
+Restart=on-failure
+RestartPreventExitStatus=23
+
+[Install]
+WantedBy=multi-user.target

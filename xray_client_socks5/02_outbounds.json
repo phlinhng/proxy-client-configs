@@ -1,0 +1,29 @@
+{
+  "outbounds": [
+    {
+      "tag": "Proxy",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "example.com",
+            "port": 443,
+            "password": "some_password"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "example.com",
+          "minVersion": "1.3"
+        }
+      }
+    },
+    {
+      "protocol": "freedom",
+      "tag": "Direct"
+    }
+  ]
+}

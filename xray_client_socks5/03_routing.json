@@ -1,0 +1,42 @@
+{
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "type": "field",
+        "outboundTag": "AsIs",
+        "domain": [
+          "geosite:private",
+          "geosite:apple-cn",
+          "geosite:google-cn",
+          "geosite:tld-cn",
+          "geosite:category-games@cn"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "Proxy",
+        "domain": [
+          "geosite:geolocation-!cn",
+          "geosite:google-scholar"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "Direct",
+        "domain": [
+          "geosite:cn",
+          "geosite:category-scholar-!cn"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "Direct",
+        "ip": [
+          "geoip:private",
+          "geoip:cn"
+        ]
+      }
+    ]
+  }
+}
