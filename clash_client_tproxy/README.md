@@ -1,4 +1,4 @@
-## clash_tproxy
+## clash_client_tproxy
 Clash 做為內網透明代理 Gateway，採用 TPROXY + FakeIP DNS 方案。
 
 ## iptables
