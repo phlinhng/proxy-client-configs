@@ -30,5 +30,5 @@ iptables -t mangle -A clash -p tcp -j TPROXY --on-port 7893 --tproxy-mark 1
 iptables -t mangle -A PREROUTING -j clash
 ```
 
-## 麵闆
+## 面版
 下載 [haishanh/yacd](https://github.com/haishanh/yacd) 的 release 後解壓縮放入 clash 配置文件目錄（`/usr/local/etc/clash`）的 `dashboard` 文件夾內。
