@@ -1,16 +1,6 @@
 {
   "inbounds": [
     {
-      "protocol": "http",
-      "port": 10800,
-      "listen": "127.0.0.1",
-      "settings": {
-        "timeout:": 0,
-        "allowTransparent": false,
-        "userLevel": 0
-      }
-    },
-    {
       "protocol": "socks",
       "port": 10801,
       "listen": "127.0.0.1",
@@ -20,7 +10,8 @@
       },
       "settings": {
         "udp": true
-      }
+      },
+      "tag": "sock_local"
     }
   ]
 }
