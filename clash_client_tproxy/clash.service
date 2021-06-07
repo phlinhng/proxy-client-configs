@@ -4,9 +4,7 @@ After=network.target
 
 [Service]
 User=root
-ExecStartPre=/usr/local/etc/clash/iptables.sh
 ExecStart=/usr/local/bin/clash -d /usr/local/etc/clash
-ExecStartPost=/usr/local/etc/clash/ipt-flush.sh
 Restart=on-failure
 
 [Install]
