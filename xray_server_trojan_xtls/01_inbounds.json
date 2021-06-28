@@ -23,6 +23,8 @@
         "xtlsSettings": {
           "serverName": "example.com",
           "alpn": [ "http/1.1" ],
+          "minVersion": "1.2",
+          "maxVersion": "1.3",
           "certificates": [
             {
               "certificateFile": "/etc/ssl/trojan/fullchain.crt",
@@ -33,7 +35,7 @@
       },
       "sniffing": {
         "enabled": true,
-        "destOverride": [ "http", "tls"]
+        "destOverride": [ "http", "tls" ]
       }
     }
   ]
