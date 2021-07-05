@@ -8,4 +8,4 @@
 ### 安装最新 xray-core
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/phlinhng/my-scripts/master/shell/xray.sh)
-``
+```
